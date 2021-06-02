@@ -1,10 +1,10 @@
 import React from "react";
-import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 
 function Card({ info }) {
   console.log("card info", info);
   return (
-    <div className="card shadow mb-5 bg-info">
+    <div className="card shadow mb-5">
       <img
         src={info.picture?.large}
         className="card-img-top rounded-circle img-thumbnail border-danger  "
@@ -22,7 +22,9 @@ function Card({ info }) {
       <ul className="list-group list-group-flush">
         <li className="list-group-item">Age : {info.dob?.age}</li>
         <li className="list-group-item">Email : {info?.email}</li>
-        <li className="list-group-item">Phone : {info?.phone}</li>
+        <li className="list-group-item">
+          <FaPhone /> {info?.phone}
+        </li>
       </ul>
     </div>
   );
